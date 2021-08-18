@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Login Page</title>
+    </head>
+    <style type="text/css" media="screen"><!--
+        #pos {
+                        position:absolute;
+                        left:12em;
+                        top:125px;
+        }
+    --></style>
+    <body>
+        <h1>Welcome to ElasticSearch Document</h1>
+        <div class='form'>
+            <form method='POST' action=''>
+                <!--The hidden tag here is necessary for CSRF protection (always include in forms)-->
+                <!--{{ form.hidden_tag() }}-->
+                <!--We display the username field label and the field itself-->
+                <!--insert a table>-->
+                <div id= "pos">
+                    <table style="width:60%">
+                        <col style="width:12%">
+                        <col style="width:15%">
+                        <col style="color:red;">
+
+                        <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        </tr>
+                        <tr>
+                        <td>{{ form.username.label }}</td>
+                        <td>{{ form.username }} </td>
+                        <td>
+
+                        </td>
+                        <td>
+                        
+                        </td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td>{{ form.password.label }}</td>
+                            <td>{{ form.password }} </td>
+                            <td> <div class='error' style="color:red;">
+                        </tr>
+                        
+                        <tr>
+                            <td>{{ form.connect }}</td>
+                            <td> <span>{{message}}</span> </td> 
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+    <body>
+</html>
+
+
+<!--
+
+
+  
+                <br>
+                {{ form.submit }}
+
+                {{form.test}}
+
+                {{ message }} -->

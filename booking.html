@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Manage Documents</title>
+    </head>
+    <body>
+        <h1>Manage your Documents</h1>
+        <div class='form'>
+            <form method='POST' action=''>
+                <!--The hidden tag here is necessary for CSRF protection (always include in forms)-->
+                {{ form.hidden_tag() }}
+                <!--We display the username field label and the field itself-->
+                
+                <h4>{{ form.es_index.label }} {{ form.es_index }}  {{ form.go }}   
+                    <span style="display:inline-block; width: 8em;"></span>
+                <span>{{ form.delete }}</span> 
+                <h4>
+                    <td> <span>{{message_index}}</span> </td> 
+                <br>              
+                <br>
+                <td>{{ form.new_index.label }}</td>
+                <td>{{ form.new_index }} <span>{{ form.create }}</span> </td> 
+                
+                <h4>
+                    <td> <span>{{message_create_index}}</span> </td> 
+                <br> 
+
+                <br>
+                <h4> {{ form.documents.label }} {{ form.documents }} {{ form.delete_document }} 
+                <br>              
+                <br>
+                <td>{{ form.new_document.label }}</td>
+                <td>{{ form.new_document}} <span>{{ form.add_document }}</span> </td> 
+                <h4>
+                    <td> <span>{{message_document}}</span> </td> 
+                <br> 
+                <br>
+                <br>
+
+
+
+
+
+
+                <h4> {{form.entrydate.label}} {{form.entrydate}}  {{form.timeslot.label}} {{form.timeslot}}</h4>
+                <span style="display:block; height: 5em;"></span>
+                <br>
+                <span style="display:inline-block; width: 25em;"></span>
+                
+                <span>{{form.appointments.label}} {{form.appointments}} </span>
+                <br>
+                <br>
+                
+                
+                <span style="display:inline-block; width: 2em;"></span>
+                <span>{{ form.update }}</span> 
+                <span style="display:inline-block; width: 3em;"></span>
+                <span style="color:red" >{{msg}} </span>
+                <br>
+                <br>
+                <h4>
+                    {% for m in message %}
+                        <br> {{m}}
+                    {% endfor %}</h4>
+                <br>
+                <br>
+                <span>{{ form.back }}</span>
+            </form>
+        </div>
+
+
+
+    <body>
+</html>

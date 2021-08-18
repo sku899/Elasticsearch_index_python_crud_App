@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Change Existing Appointment</title>
+    </head>
+    <body>
+        <div class='form'>
+            <h1>{{greeting}}, {{customer}}, this is your account details</h1>
+            <form method='POST' action=''>
+                {{ form.hidden_tag() }}
+                {{ form.firstname.label }} {{ form.firstname }}
+                <br>
+                <br>
+                {{ form.lastname.label }} {{ form.lastname }}
+                <br>
+                <br>
+                {{ form.email.label }} {{ form.email }} 
+                <br>
+                <br>
+                {{ form.telephone.label }} {{ form.telephone}} 
+                <br>
+                <br>
+                {{ form.gender.label }} {{ form.gender}}
+                <br>
+                <br>
+                {{ form.age.label }} {{ form.age}} 
+                <br>
+                <br>
+                {{ form.update }}
+                <br>
+                <br>
+                {{ form.delete }}
+                <br>
+                <br>
+                {{ form.booking }}  
+            {{ message }}
+
+
+            </form>
+        </div>
+    </body>
+</html>

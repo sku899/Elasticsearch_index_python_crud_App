@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Actions Page</title>
+    </head>
+    <style type="text/css" media="screen"><!--
+        #pos {
+                        position:absolute;
+                        left:12em;
+                        top:125px;
+        }
+    --></style>
+    <body>
+        <h1>{{title}}</h1>
+        <div class='form'>
+            <form method='POST' action=''>
+                <!--The hidden tag here is necessary for CSRF protection (always include in forms)-->
+                {{ form.hidden_tag() }}
+                <!--We display the username field label and the field itself-->
+                <!--insert a table>-->
+                <div id= "pos">
+                    <table style="width:50%">
+                        <col style="width:8%">
+                        <col style="width:80%">
+                        <col style="width:12%">
+
+                        <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        </tr>
+                        <tr>
+                        <td>{{ form.update }}</td>
+                        <td> View, Update and Delete your account</td>
+                        <td> </td>
+                        </tr>
+                        <tr></tr>
+                        <tr>
+                            <td>{{ form.booking }}</td>
+                            <td> Create, View, Update and Delete your appointments</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td> </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <span></span>
+                <h4>
+                {% for m in message %}
+                    <br> {{m}}
+                {% endfor %}</h4>
+                </div>
+                <br>
+                <br>
+                {{ form.logout }}
+               
+            </form>
+        </div>
+    <body>
+</html>

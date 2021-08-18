@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Update Booking Page</title>
+    </head>
+    <body>
+        <h1>Appointment</h1>
+        <div class='form'>
+            <form method='POST' action=''>
+                <!--The hidden tag here is necessary for CSRF protection (always include in forms)-->
+                {{ form.hidden_tag() }}
+                <!--We display the username field label and the field itself-->
+                
+                <h4>{{ form.country.label }} {{ form.country }}  {{ form.go }}                  
+                <br>
+                <br>
+                <h4> {{ form.vaccine.label }} {{ form.vaccine }}
+                <br>
+                <br>
+                <h4> {{form.entrydate.label}} {{form.entrydate}}  {{form.timeslot.label}} {{form.timeslot}}</h4>
+                <span style="display:block; height: 5em;"></span>
+                <span style="display:inline-block; width: 2em;"></span>
+                <span>{{ form.update }}</span>     <span>{{ form.cancel }}</span>
+
+                
+                <br>
+                <br>
+                <h4>
+                    {% for m in message %}
+                        <br> {{m}}
+                    {% endfor %}</h4>
+            </form>
+        </div>
+
+
+
+    <body>
+</html>
